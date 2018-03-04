@@ -1,58 +1,36 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/gutitrombotto/partida-ficha-digital/master/public/images/logo_partida_small.png"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Movimiento Partida - Ficha Digital
 
-## About Laravel
+## Sobre el Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Esta aplicación busca simplificar el funcionamiento y la gestión de la presentación de jovenes al Movimiento Partida.
+Algunas de las funcionalidades son:
+- Completar informacion de la ficha de presentacion directamente en la web.
+- Carga de datos de padrinos anteriormente cargada.
+- Facilitar codigos de venta de fichas.
+- Administración de los datos de cada presentación por parte del Secretariado.
+- Mantener una base de datos historica de los miembros del movimiento.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Sobre el Software
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+La aplicación está basada en dos principales frameworks:
+- [Laravel 5.5](https://laravel.com/docs/5.5/): framework de backend, basado en php7.* con base de datos mysql.
+- [Vue 2.0](https://vuejs.org/v2/guide/): framework de frontend. De facil uso y de gran potencial
 
-## Learning Laravel
+## ¿Como Instalar la aplicación para desarrollo?
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+Para correr la aplicación se debe tener instalado un webserver, base de datos mysql, composer (gesto de paquetes de php), npm (gestor de paquetes de frontend).
+Se recomienda la instalación de la maquiena virtual [Homestead](https://laravel.com/docs/5.5/homestead) que cuenta con todo lo necesario para el desarrollo. Por cualquier error consultar al encargado de la app.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+Una vez instalado Homestead se debe realizar a los siguientes pasos:
+- Clonar Repositorio
+- Instalar dependecias de php: composer install
+- Crear archivo .env con la informacion necesarioa (cambiar la establecida por defecto si fuera necesario)
+- Crear key de la aplicaccion: php artisan key:generate
+- Correr migraciones: php artisan migrate
+- Instalar pquestes de node: npm install
+- Compilar javascript: npm run watch-poll
 
-## Laravel Sponsors
+Si tiene algún inconveniente enviar un email a gutitrombotto@gmail.com
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Pulse Storm](http://www.pulsestorm.net/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
