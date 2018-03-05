@@ -4,7 +4,7 @@
 
 ## Sobre el Proyecto
 
-Esta aplicación busca simplificar el funcionamiento y la gestión de la presentación de jovenes al Movimiento Partida.
+Esta aplicación busca simplificar el funcionamiento y la gestión de la presentación de jovenes al Movimiento Partida mediante una Ficha Digital.
 Algunas de las funcionalidades son:
 - Completar informacion de la ficha de presentacion directamente en la web.
 - Carga de datos de padrinos anteriormente cargada.
