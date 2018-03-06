@@ -17,8 +17,10 @@ class Usuario extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nombre','email', 'password', 'dni', 'codigo_activacion'
+        'nombre','email', 'password', 'dni', 'codigo_activacion', 'es_padrino', 'es_ahijado'
     ];
+
+    // protected $visible = ['es_padrino', 'es_ahijado'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -26,7 +28,7 @@ class Usuario extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'
     ];
 
     public function presentaciones()

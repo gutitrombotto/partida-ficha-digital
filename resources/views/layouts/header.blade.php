@@ -205,10 +205,15 @@
             </li>
 
             <li class="divider"></li>
-
-            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-
+            @if (Auth::check())
+                <li><a href="{{url('/logout')}}" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </li>
+
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+            @endif
 
         </ul>
 

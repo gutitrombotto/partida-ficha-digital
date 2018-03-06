@@ -57,6 +57,12 @@
             APP_URL: JSON.parse('{!!json_encode(env('APP_URL'))!!}'),
         };
 
+        @if (Auth::check())
+            window.usuario_logueado = JSON.parse('{!!Auth::user()->toJson()!!}');
+        @else
+            window.usuario_logueado = {};
+        @endif
+
     </script>
 
 

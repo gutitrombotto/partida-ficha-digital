@@ -13,9 +13,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        // factory(Usuario::class, 1000)->create();
         $role_secre = Role::where('name', 'secretariado')->first();
         $role_miembro  = Role::where('name', 'miembro')->first();
+        
+        // factory(Usuario::class, 1000)->create()->each(function ($u) {
+        //     $u->roles()->attach($role_miembro);
+        // });;
+        
+        
         
         $miembro = new Usuario();
         $miembro->nombre = 'Agustin Trombotto';

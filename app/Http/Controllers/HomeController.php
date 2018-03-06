@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         
         if($request->user()->hasRole('secretariado')) return view('secre.panel_secre');
-        else return view('home');
+        else return  redirect('home');
         
     }
 }

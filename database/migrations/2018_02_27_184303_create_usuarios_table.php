@@ -19,6 +19,8 @@ class CreateUsuariosTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('dni', 10);
+            $table->boolean('es_padrino')->default(false);
+            $table->boolean('es_ahijado')->default(false);
             $table->string('codigo_activacion', 50);
             $table->rememberToken();
             $table->timestamps();
