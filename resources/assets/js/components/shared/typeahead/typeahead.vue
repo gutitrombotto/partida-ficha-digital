@@ -18,14 +18,9 @@ export default {
   components: {
     Autocomplete
   },
-  data: function() {
-    return {
-      url: window.ENV.APP_URL + "/autocomple-usuarios?"
-    };
-  },
   props: {
     url_data: {
-      default: window.ENV.APP_URL + "/autocomple-usuarios?"
+      default: window.ENV.APP_URL + "/autocomple-usuarios"
     },
     selected_data: {
       type: Function,
