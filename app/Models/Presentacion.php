@@ -10,7 +10,7 @@ class Presentacion extends Model
 
     public function partida()
     {
-        return $this->belongsTo('App\Models\Partida');
+        return $this->belongsTo('App\Models\Partida', 'partida_id');
     }
 
     public function ficha_padrino()

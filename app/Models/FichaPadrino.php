@@ -10,7 +10,12 @@ class FichaPadrino extends Model
 
     public function presentacion()
     {
-        return $this->belongsTo('App\Models\Presentacion');
+        return $this->belongsTo('App\Models\Presentacion', 'presentacion_id');
+    }
+
+    public function padrino()
+    {
+        return $this->belongsTo('App\Models\Usuario', 'usuario_id');
     }
 
     // public function preguntas()

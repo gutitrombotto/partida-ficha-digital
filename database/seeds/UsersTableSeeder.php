@@ -16,9 +16,9 @@ class UsersTableSeeder extends Seeder
         $role_secre = Role::where('name', 'secretariado')->first();
         $role_miembro  = Role::where('name', 'miembro')->first();
         
-        // factory(Usuario::class, 1000)->create()->each(function ($u) {
-        //     $u->roles()->attach($role_miembro);
-        // });;
+        factory(Usuario::class, 10)->create()->each(function ($u, $role_miembro) {
+            $u->roles()->attach($role_miembro);
+        });;
         
         
         
