@@ -19,4 +19,9 @@ class UsuariosController extends Controller
         // return get_class_methods($usuarios);
         return response()->json($usuarios);
     }
+
+    public function lista_usuarios(Request $request)
+    {
+        return response()->json(Usuario::paginate());
+    }
 }

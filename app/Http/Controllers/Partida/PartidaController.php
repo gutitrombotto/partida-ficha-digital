@@ -9,7 +9,10 @@ use App\Models\Partida;
 class PartidaController extends Controller
 {
 
-
+    public function tabla_partida(Request $request)
+    {
+        return view('secre.tabla_partida');
+    }
     public function crear_partida(Request $request) 
     {
         $errors = $this->validar_request($request);

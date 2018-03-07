@@ -27,7 +27,8 @@ Route::get('/panel-ahijado', 'Fichas\FichaAhijadoController@panel_ahijado')->mid
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/panel-secre', 'HomeController@panel_secre');
+// Route::get('/panel-secre', 'HomeController@panel_secre');
+Route::get('/partida', 'Partida\PartidaController@tabla_partida');
 
 Route::middleware(['auth', 'secretariado'])->group(function () {
     Route::get('/panel-secre', 'Secre\SecreController@panel_secre');
@@ -37,3 +38,5 @@ Route::middleware(['auth', 'secretariado'])->group(function () {
 Route::post('/crear-partida', 'Partida\PartidaController@crear_partida');
 Route::post('/crear-presentacion', 'Partida\PresentacionController@crear_presentacion');
 Route::get('/presentaciones-partida', 'Partida\PresentacionController@presentaciones_partida');
+
+Route::get('lista-usuarios', 'Usuarios\UsuariosController@lista_usuarios');

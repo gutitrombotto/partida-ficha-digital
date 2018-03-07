@@ -9,7 +9,6 @@
 // require('./layout');
 
 import 'vue-instant/dist/vue-instant.css'
-import VueInstant from 'vue-instant/dist/vue-instant.common'
 import Autocomplete from 'vue2-autocomplete-js'
 
 window.Vue = require('vue');
@@ -32,6 +31,7 @@ window.axios = require('axios');
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('typeahead', require('./components/shared/typeahead/typeahead.vue'));
 Vue.component('home', require('./components/unique-instance/home/home.vue'));
+Vue.component('tabla-partida', require('./components/shared/tabla-partida/tabla-partida.vue'));
 
 
 const app = new Vue({
