@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFichasAhijadosTable extends Migration
+class CreateCodigosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,16 @@ class CreateFichasAhijadosTable extends Migration
      */
     public function up()
     {
-        Schema::create('fichas_ahijados', function (Blueprint $table) {
+        Schema::create('codigos', function (Blueprint $table) {
             $table->increments('id');
-                        
+            $table->string('codigo', 7);
+            $table->boolean('codigo_usado')->default(false);
+            $table->integer('partida_id')->unsigned();
+
             $table->timestamps();
+
+            $table->foreign('partida_id')->references('id')->on('partidas');
+
         });
     }
 
@@ -27,6 +33,6 @@ class CreateFichasAhijadosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fichas_ahijados');
+        Schema::dropIfExists('codigos');
     }
 }

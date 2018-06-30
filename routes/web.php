@@ -27,6 +27,12 @@ Route::get('/panel-ahijado', 'Fichas\FichaAhijadoController@panel_ahijado')->mid
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('ficha-padrino', function () {
+    return view('fichas.ficha-padrino');
+});
+Route::get('ficha-ahijado', function () {
+    return view('fichas.ficha-ahijado');
+});
 // Route::get('/panel-secre', 'HomeController@panel_secre');
 Route::get('/partida', 'Partida\PartidaController@tabla_partida');
 
