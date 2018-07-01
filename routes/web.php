@@ -20,14 +20,14 @@ Route::get('/', function () {
 // });return view('home');
 // });
 
-Route::get('/autocomple-usuarios', 'Usuarios\UsuariosController@autocomplete');
-Route::get('/panel-padrino', 'Fichas\FichaPadrinoController@panel_padrino')->middleware('auth','padrino');
-Route::get('/panel-ahijado', 'Fichas\FichaAhijadoController@panel_ahijado')->middleware('auth','ahijado');
+Route::get('autocomple-usuarios', 'Usuarios\UsuariosController@autocomplete');
+Route::get('panel-padrino', 'Fichas\FichaPadrinoController@panel_padrino')->middleware('auth','padrino');
+Route::get('panel-ahijado', 'Fichas\FichaAhijadoController@panel_ahijado')->middleware('auth','ahijado');
 Route::get('prueba', 'Fichas\FichaAhijadoController@prueba');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 Route::get('ficha-padrino', function () {
     return view('fichas.ficha-padrino');
 });
@@ -35,15 +35,15 @@ Route::get('ficha-ahijado', function () {
     return view('fichas.ficha-ahijado');
 });
 // Route::get('/panel-secre', 'HomeController@panel_secre');
-Route::get('/partida', 'Partida\PartidaController@tabla_partida');
+Route::get('partida', 'Partida\PartidaController@tabla_partida');
 
 Route::middleware(['auth', 'secretariado'])->group(function () {
-    Route::get('/panel-secre', 'Secre\SecreController@panel_secre');
+    Route::get('panel-secre', 'Secre\SecreController@panel_secre');
     // Route::post('/crear-partida', 'Partida\PartidaController@crear_partida');
 });
 
-Route::post('/crear-partida', 'Partida\PartidaController@crear_partida');
-Route::post('/crear-presentacion', 'Partida\PresentacionController@crear_presentacion');
-Route::get('/presentaciones-partida', 'Partida\PresentacionController@presentaciones_partida');
+Route::post('crear-partida', 'Partida\PartidaController@crear_partida');
+Route::post('crear-presentacion', 'Partida\PresentacionController@crear_presentacion');
+Route::get('presentaciones-partida', 'Partida\PresentacionController@presentaciones_partida');
 
 Route::get('lista-usuarios', 'Usuarios\UsuariosController@lista_usuarios');

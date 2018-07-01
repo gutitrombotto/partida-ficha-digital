@@ -12,7 +12,7 @@
 
     <meta name="description" content="Ficha Digital del Movimiento Partida. Inscripcion a retiro Partida">
 
-    
+
     <meta name="author" content="Agustin Trombotto">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -91,7 +91,9 @@
             <div id="app">
                 @yield('content')
             </div>
-            
+
+                @yield('no-vue-content')
+
 
         </div>
 
