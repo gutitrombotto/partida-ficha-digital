@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FichaAhijado extends Model
+class RespuestaAhijado extends Model
 {
-    protected $table = 'fichas_ahijados';
+    protected $table = 'respuestas_ahijados';
 
     public function presentacion()
     {
@@ -18,13 +18,8 @@ class FichaAhijado extends Model
         return $this->belongsTo('App\Models\Usuario', 'usuario_id');
     }
 
-    // public function preguntas()
-    // {
-    //     return $this->hasMany('App\Models\Pregunta');
-    // }
-
-    public function preguntas()
+    public function pregunta()
     {
-        return $this->morphMany('App\Models\Pregunta', 'preguntatable');
+        return $this->belongsTo('App\Models\PreguntaPadrino', 'pregunta_id');
     }
 }

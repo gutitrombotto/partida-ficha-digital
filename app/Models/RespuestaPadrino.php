@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FichaPadrino extends Model
+class RespuestaPadrino extends Model
 {
-    protected $table = 'fichas_padrinos';
+    protected $table = 'respuestas_padrinos';
 
     public function presentacion()
     {
@@ -22,7 +22,7 @@ class FichaPadrino extends Model
     // {
     //     return $this->hasMany('App\Models\Pregunta');
     // }
-    
+
     public function preguntas()
     {
         return $this->morphMany('App\Models\Pregunta', 'preguntatable');

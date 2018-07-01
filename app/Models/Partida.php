@@ -8,18 +8,14 @@ class Partida extends Model
 {
     protected $table = 'partidas';
 
-    public function fichas()
+    public function presentaciones()
     {
         return $this->hasMany('App\Models\Presentacion');
     }
 
-    public function fichas_padrinos()
+    public function presentaciones()
     {
-        return $this->hasManyThrough('App\Models\FichaPadrino', 'App\Models\Presentacion');
+        return $this->hasMany('App\Models\Codigo');
     }
 
-    public function fichas_ahijados()
-    {
-        return $this->hasManyThrough('App\Models\FichaAhijado', 'App\Models\Presentacion');
-    }
 }

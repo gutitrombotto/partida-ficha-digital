@@ -13,24 +13,14 @@ class Presentacion extends Model
         return $this->belongsTo('App\Models\Partida', 'partida_id');
     }
 
-    public function ficha_padrino()
-    {
-        return $this->hasOne('App\Models\FichaPadrino');
-    }
-
-    public function ficha_ahijado()
-    {
-        return $this->hasOne('App\Models\FichaAhijado');
-    }
-
     public function padrino()
     {
-        return $this->hasOne('App\Models\Usuario');       
+        return $this->hasOne('App\Models\Usuario', 'padrino_id');
     }
 
     public function ahijado()
     {
-        return $this->hasOne('App\Models\Usuario');       
+        return $this->hasOne('App\Models\Usuario', 'ahijado_id');
     }
-    
+
 }

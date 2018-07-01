@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/autocomple-usuarios', 'Usuarios\UsuariosController@autocomplete');
 Route::get('/panel-padrino', 'Fichas\FichaPadrinoController@panel_padrino')->middleware('auth','padrino');
 Route::get('/panel-ahijado', 'Fichas\FichaAhijadoController@panel_ahijado')->middleware('auth','ahijado');
+Route::get('prueba', 'Fichas\FichaAhijadoController@prueba');
 
 Auth::routes();
 

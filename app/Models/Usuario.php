@@ -41,6 +41,12 @@ class Usuario extends Authenticatable
         return $this->belongsToMany('App\Models\Role');
     }
 
+    public function respuestas_padrino()
+    {
+        return $this->hasMany('App\Models\RespuestaPadrino');
+    }
+
+
     /**
     * @param string|array $roles
     */
